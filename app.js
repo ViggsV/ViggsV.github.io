@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var hamburger = document.querySelector('.hamburger');
-    var asideLeft = document.querySelector('.aside-left');
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const asideLeft = document.querySelector('.aside-left');
 
-    hamburger.addEventListener('click', function () {
+    hamburger.addEventListener('click', function() {
         asideLeft.classList.toggle('open');
     });
 });
