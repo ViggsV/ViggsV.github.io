@@ -1,40 +1,64 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #2B2B2B;
+    background-color: #4EB2FF;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 header {
-    background-color: #2b2b2b;
-    padding: 1rem;
+    background-color: #FFB8FD;
+    padding: 2rem;
     text-align: center;
+
 }
 
 header h1 {
-    color: #f0e68c;
+    color: #2B2B2B;
     margin: 0;
 }
 
 .main {
     display: flex;
+    flex-grow: 1;
+    position: relative; /* added */
 }
 
-aside {
-    width: 250px;
-    background-color: #2b2b2b;
+.aside-left {
+    width: 150px;
+    background-color: #FFB8FD;
+    position: fixed; /* added */
+    left: 0; /* added */
+    top: flex; /* added */
+    height: 100%; /* added */
 }
 
-nav {
+.aside-right {
+    width: 150px;
+    background-color: #FFB8FD;
+    position: fixed; /* added */
+    right: 0; /* added */
+    top: flex; /* added */
+    height: 100%; /* added */
+}
+
+#nav-left, #nav-right {
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
+    min-height: 100%;
+
 }
 
 nav a {
-    color: #f0e68c;
+    color: #2B2B2B;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    
 }
 
 nav a:hover {
@@ -45,6 +69,9 @@ nav a:hover {
 .content {
     flex-grow: 1;
     padding: 2rem;
+    margin-left: 150px; /* added */
+    margin-right: 150px; /* added */
+    border: 3px solid #2B2B2B;
 }
 
 section {
@@ -53,7 +80,7 @@ section {
 
 button#play-demo {
     background-color: #87cefa;
-    color: #fff;
+    color: #2B2B2B;
     border: none;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
@@ -66,7 +93,7 @@ button#play-demo:hover {
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #2b2b2b;
-    color: #f0e68c;
+    padding: 2rem;
+    background-color: #FFB8FD;
+    color: #2B2B2B;
 }
