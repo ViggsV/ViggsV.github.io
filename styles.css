@@ -14,7 +14,6 @@ header {
     background-color: #FFB8FD;
     padding: 2rem;
     text-align: center;
-
 }
 
 header h1 {
@@ -25,40 +24,28 @@ header h1 {
 .main {
     display: flex;
     flex-grow: 1;
-    position: relative; /* added */
+    position: relative;
 }
 
-.aside-left {
-    width: 150px;
-    background-color: #FFB8FD;
-    position: fixed; /* added */
-    left: 0; /* added */
-    top: flex; /* added */
-    height: 100%; /* added */
-}
-
+.aside-left,
 .aside-right {
-    width: 150px;
+    width: 100%;
     background-color: #FFB8FD;
-    position: fixed; /* added */
-    right: 0; /* added */
-    top: flex; /* added */
-    height: 100%; /* added */
+    display: none;
 }
 
-#nav-left, #nav-right {
+#nav-left,
+#nav-right {
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
     min-height: 100%;
-
 }
 
 nav a {
     color: #2B2B2B;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    
 }
 
 nav a:hover {
@@ -69,8 +56,7 @@ nav a:hover {
 .content {
     flex-grow: 1;
     padding: 2rem;
-    margin-left: 150px; /* added */
-    margin-right: 150px; /* added */
+    margin: 0;
     border: 3px solid #2B2B2B;
 }
 
@@ -96,4 +82,65 @@ footer {
     padding: 2rem;
     background-color: #FFB8FD;
     color: #2B2B2B;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .aside-left,
+    .aside-right {
+        display: block;
+        width: 150px;
+        position: fixed;
+        height: 100%;
+    }
+    
+    .aside-left {
+        left: 0;
+    }
+    
+    .aside-right {
+        right: 0;
+    }
+    
+    .content {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
+/* Show hamburger menu on small screens */
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+
+@media (max-width: 767px) {
+    .hamburger {
+        display: block;
+    }
+
+    .aside-left {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 100;
+        background-color: #FFB8FD;
+        overflow-y: auto;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+    }
+
+    .aside-left.open {
+        transform: translateX(0%);
+    }
 }
