@@ -101,6 +101,16 @@ nav a:hover {
     padding: 0;
     margin: 0;
   }
+  #grounds-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .copy-list {
+    color: #C75A5A;
+  }
+  
   /* Style the container for the small buttons */
 .grounds-buttons {
   display: flex;
