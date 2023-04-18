@@ -40,7 +40,7 @@
     grid-area: main;
     border-top:  0.2rem solid #1F1F1F;
     border-bottom:  0.2rem solid #1F1F1F;;
-    
+    position: relative;
   }
   
   .aside-1 {
@@ -79,7 +79,7 @@
 }
 
 nav a:hover {
-    color: #568EA3;
+    color: #E0E0E0;
     background-color: #568EA3;
 }
   
@@ -88,6 +88,71 @@ nav a:hover {
     margin: 0;
     color: #E0E0E0
   }
+  /* Define styles for the content-wrapper class
+  This class ensures that the content is displayed in a column layout,
+   centering the header horizontally*/ 
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .syntax-content {
+    padding: 0;
+    margin: 0;
+  }
+  /* Style the container for the small buttons */
+.grounds-buttons {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+/* Style the small buttons */
+.small-button {
+  background-color: #007BFF;
+  color: #E0E0E0;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+/* Style the small buttons on hover */
+.small-button:hover {
+  background-color: #0056B3;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -90px; /* Use half of the width (180/2 = 90) to center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 
   #gallery-container {
     display: flex;
@@ -96,6 +161,11 @@ nav a:hover {
     gap: 10px;
   }
   
+  .content-header {
+    text-align: center;
+    margin-top: 20px;
+    color: #333333;
+  }
   #gallery-container img {
     max-width: 230px;
     height: auto;
@@ -104,14 +174,16 @@ nav a:hover {
   
   #gallery-nav {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    position: absolute; /* Add this line */
+    bottom: 20px; /* Add this line */
+    width: 100%; /* Add this line */
   }
   
   #gallery-nav button {
     background-color: #007BFF;
-    color: white;
+    color: #E0E0E0;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
