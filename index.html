@@ -6,42 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Development Vlog</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
 </head>
 
 <body>
-<div class="wrapper">
-  <header class="header">
-    <img src="images/logo.png" alt="Dev" class="header-logo">
-  </header>
-  <div class="main">
-    <div id="gallery-container"></div>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
-  </div>
-  
-  <aside class="aside aside-1">
-    <nav id="nav1">
-        <a href="#Grounds" id="grounds-btn">Grounds</a>
-        <a href="#Journey" id="journey-btn">Journey</a>
-        <a href="#Studies" id="studies-btn">Studies</a>
-        <a href="#Journal" id="journal-btn">Journal</a>
-        <a href="#Gallery" id="gallery-btn">Gallery</a>
-        <a href="#Sources" id="sources-btn">Sources</a>
-        <a href="#Profile" id="profile-btn">Profile</a>
-    </nav>
-  </aside>
-  <aside class="aside aside-2">
-    <nav id="nav2">
-        <a href="#game1" id="game1-btn">I</a>
-        <a href="#game2" id="game1-btn">II</a>
-        <a href="#game3" id="game1-btn">III</a>
-        <a href="#game4" id="game1-btn">IV</a>
-        <a href="#game5" id="game1-btn">V</a>
-        <a href="#game6" id="game1-btn">VI</a>
-        <a href="#game7" id="game1-btn">VII</a>
-    </nav>
-  </aside>
-  <footer class="footer">Created by Viggs | ©2023</footer>
 </div>
+  <a href="/pages/gallery/index.html" class="button-anchor">
+    <button class="nav-button" id="gallery-button">To AI space</button>
+  </a>
+</div>
+<section class="hidden">
+    <h1>Hello.</h1>
+</section>
+
+<section class="hidden">
+    <h1>My name is Viggs</h1>
+    <p>This is my website.</p>
+</section>
+
+<section class="hidden">
+    <h1>I am having fun making this</h1>
+</section>
+
+<section class="hidden">
+<h1>I can be professional</h1>
+<div class="logos">
+    <div class="logo hidden">
+        <img src="assets/images/professional1.jpg" class="slide-img" id="pulse1">
+    </div>
+    <div class="logo hidden">
+        <img src="assets/images/professional2.jpg" class="slide-img" id="pulse2">
+    </div>
+    <div class="logo hidden">
+        <img src="assets/images/professional3.jpg" class="slide-img" id="pulse3">
+    </div>
+    </div>
+</section>
+
+<section class="hidden">
+  <h1>I can be silly</h1>
+  <div class="logos">
+      <div class="logo hidden">
+          <img src="assets/images/silly1.jpg" class="slide-img" id="pulse4">
+      </div>
+      <div class="logo hidden">
+          <img src="assets/images/silly2.jpg" class="slide-img" id="pulse5">
+      </div>
+      <div class="logo hidden">
+          <img src="assets/images/silly3.jpg" class="slide-img" id="pulse6">
+      </div>
+      </div>
+  </section>
+
+<section class="portrait-background">
+  <h1>I can be creative.</h1>
+        <div class="portrait">
+        <div class="portrait-background"></div>
+        <img src="assets/images/profilelight.png" class="portrait-light portrait-img">
+        <img src="assets/images/midleft.png" class="portrait-left portrait-img">
+        <img src="assets/images/midright.png" class="portrait-right portrait-img">
+        <img src="assets/images/midground.png" class="portrait-ground portrait-img">
+        <img src="assets/images/blurleft.png" class="portrait-blurleft portrait-img">
+        <img src="assets/images/blurright.png" class="portrait-blurright portrait-img">
+        <img src="assets/images/foregroundleft.png" class="portrait-foregroundleft portrait-img">
+        <img src="assets/images/foregroundright.png" class="portrait-foregroundright portrait-img">
+        <audio id="poemAudio">
+          <source src="assets/audio/poem.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+        <button onclick="playAudio()" id="playPoem">You've reached the end. Here is some music I made.</button>
+    </div>
+    </section>
+
+    <svg style="display: none;">
+        <defs>
+          <filter id="noise">
+            <feTurbulence
+              baseFrequency="0.7,0.8"
+              seed="0"
+              type="fractalNoise"
+              result="static"
+            >
+            <!-- can't get 'begin' to work with class rather than id -->
+              <animate
+                attributeName="seed"
+                values="0;100"
+                dur="800ms"
+                repeatCount="1" 
+                begin="pulse1.mouseenter; pulse2.mouseenter; pulse3.mouseenter; pulse4.mouseenter; pulse5.mouseenter; pulse6.mouseenter" 
+              />
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="static" >
+              <animate
+                attributeName="scale"
+                values="0;40;0"
+                dur="800ms"
+                repeatCount="1" 
+                begin="pulse1.mouseenter; pulse2.mouseenter; pulse3.mouseenter; pulse4.mouseenter; pulse5.mouseenter; pulse6.mouseenter"
+              />
+            </feDisplacementMap>
+          </filter>  
+        </defs>
+      </svg>
+      
 </body>
-<script src="app.js"></script>
-</html>

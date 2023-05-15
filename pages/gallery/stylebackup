@@ -1,0 +1,74 @@
+/* Media queries */
+@media (min-width: 768px) {
+    /* Desktop styles for left and right asides */
+    .aside-left,
+    .aside-right {
+        display: block;
+        width: 150px;
+        position: fixed;
+        height: 100%;
+    }
+
+    .aside-left {
+        left: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .aside-right {
+        right: 0;
+    }
+
+    /* Desktop styles for content */
+    .content {
+        margin-left: 150px;
+        margin-right: 150px;
+        
+    }
+}
+
+@media (max-width: 767px) {
+    /* Mobile styles for header */
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+@media (max-width: 767px) {
+    /* Mobile styles for hamburger menu */
+    .hamburger {
+        display: block;
+    }
+
+    /* Mobile styles for left aside */
+    .aside-left {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 100;
+        background-color: #FFB8FD;
+        overflow-y: auto;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-150px);
+    }
+    
+    /* Mobile styles for left aside when opened */
+    .aside-left.open {
+        transform: translateX(0);
+    }
+}
